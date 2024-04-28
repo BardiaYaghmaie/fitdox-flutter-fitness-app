@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Homepage extends StatelessWidget {
@@ -20,7 +19,7 @@ class Homepage extends StatelessWidget {
 
   Container searchField() {
     return Container(
-          margin: EdgeInsets.only(top: 40, left: 20, right: 20),
+          margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -34,22 +33,22 @@ class Homepage extends StatelessWidget {
             decoration: InputDecoration(
               filled: true,
               fillColor: Colors.white,
-              contentPadding: EdgeInsets.all(15),
+              contentPadding: const EdgeInsets.all(15),
               hintText: "Search...",
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 fontSize: 14
               ),
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(12),
                 child: SvgPicture.asset('assets/icons/Search.svg'),
               ),
-              suffixIcon: Container(
+              suffixIcon: SizedBox(
                 width: 100,
                 child: IntrinsicHeight(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      VerticalDivider(
+                      const VerticalDivider(
                         color: Colors.black,
                         indent: 10,
                         endIndent: 10,
@@ -74,7 +73,7 @@ class Homepage extends StatelessWidget {
 
   AppBar appBar() {
     return AppBar(
-      title: Text(
+      title: const Text(
         "Breakfast",
       style: TextStyle(color: Colors.black,
       fontSize: 18,
@@ -89,15 +88,15 @@ class Homepage extends StatelessWidget {
           
         },
         child: Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: const Color(0xffF7F8F8),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: SvgPicture.asset('assets/icons/arrow-left.svg',
           height: 20,
           width: 20,),
-          decoration: BoxDecoration(
-            color: Color(0xffF7F8F8),
-            borderRadius: BorderRadius.circular(10),
-          ),
         ),
       ),
       actions: [
@@ -107,15 +106,15 @@ class Homepage extends StatelessWidget {
           },
           child: Container(
             width: 37,
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: const Color(0xffF7F8F8),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: SvgPicture.asset('assets/icons/dots.svg',
           height: 5,
           width: 5,),
-          decoration: BoxDecoration(
-            color: Color(0xffF7F8F8),
-            borderRadius: BorderRadius.circular(10),
-          ),
                   ),
         ),
       ],
